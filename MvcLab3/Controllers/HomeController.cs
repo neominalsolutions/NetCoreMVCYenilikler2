@@ -7,15 +7,18 @@ namespace MvcLab3.Controllers
   public class HomeController : Controller
   {
     private readonly ILogger<HomeController> _logger;
+    private readonly IConfiguration configuration;
 
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
     {
       _logger = logger;
+      this.configuration = configuration;
     }
 
     public IActionResult Index()
     {
+      ViewBag.Mode = this.configuration.GetSection("Mode").Value;
       return View();
     }
 
