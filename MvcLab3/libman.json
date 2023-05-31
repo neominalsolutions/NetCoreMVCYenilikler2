@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "provider": "cdnjs",
+      "library": "fontawesome-iconpicker@3.2.0",
+      "destination": "wwwroot/css/icons"
+    },
+    {
+      "provider": "unpkg",
+      "library": "jquery-ui@1.13.2",
+      "destination": "wwwroot/js/jquery-ui"
+    }
+  ]
+}
